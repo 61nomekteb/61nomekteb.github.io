@@ -42,6 +42,34 @@
             background-color: rgba(0, 94, 166, 0.80); /* Hover durumunda şeffaflığı koruyarak rengini değiştirelim */
             transform: translateX(10px); /* Butonların soldan sağa kayarak değişmesini sağlamak */
         }
+        .settings {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            cursor: pointer;
+            color: white;
+            font-size: 24px;
+        }
+        .dropdown {
+            display: none;
+            position: absolute;
+            top: 40px;
+            right: 20px;
+            background-color: white;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .dropdown a {
+            color: black;
+            padding: 10px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown a:hover {
+            background-color: #ddd;
+        }
     </style>
 </head>
 <body>
@@ -49,6 +77,14 @@
     <div class="button-container">
         <button id="steamButton">Steam</button>
         <button id="reqemsalButton">Reqemsal</button>
+    </div>
+
+    <div class="settings" id="settingsIcon" onmouseover="showDropdown()" onmouseout="hideDropdown()">
+        ⚙️
+        <div class="dropdown" id="dropdown">
+            <a href="#" onclick="switchLanguage('ru')">Rusça</a>
+            <a href="#" onclick="switchLanguage('default')">Standart</a>
+        </div>
     </div>
 
     <script src="app.js"></script>
