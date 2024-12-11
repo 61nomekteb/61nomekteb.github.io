@@ -1,11 +1,15 @@
-// Açılır menüyü göster
-function showDropdown() {
-    document.getElementById("dropdown").style.display = "block";
-}
+// Menü durumu için bir değişken tanımlayın
+let dropdownVisible = false;
 
-// Açılır menüyü gizle
-function hideDropdown() {
-    document.getElementById("dropdown").style.display = "none";
+// Açılır menü davranışı için fonksiyon
+function toggleDropdown() {
+    const dropdown = document.getElementById("dropdown");
+    if (dropdownVisible) {
+        dropdown.style.display = "none";
+    } else {
+        dropdown.style.display = "block";
+    }
+    dropdownVisible = !dropdownVisible;
 }
 
 // Dil değiştirme fonksiyonu
@@ -72,3 +76,5 @@ document.getElementById('reqemsalButton').addEventListener('click', function() {
         );
     });
 });
+
+document.getElementById('settingsIcon').addEventListener('click', toggleDropdown);
