@@ -1,3 +1,28 @@
+// Açılır menüyü göster
+function showDropdown() {
+    document.getElementById("dropdown").style.display = "block";
+}
+
+// Açılır menüyü gizle
+function hideDropdown() {
+    document.getElementById("dropdown").style.display = "none";
+}
+
+// Dil değiştirme fonksiyonu
+function switchLanguage(language) {
+    if (language === 'ru') {
+        alert('Rusça diline geçiliyor...');
+        // Dil değiştirme mantığını buraya ekleyin
+    } else {
+        alert('Standart diline geçiliyor...');
+        // Dil değiştirme mantığını buraya ekleyin
+    }
+}
+
+// Kayıt işlemiyle ilgili kodları kaldırın
+// Örneğin, registerUser gibi bir fonksiyonunuz varsa, onu kaldırın
+
+// Mevcut toggleContainer fonksiyonunu ve event listener'ları saklıyoruz
 function toggleContainer(buttonId, containerId, contentHtml) {
     const existingContainer = document.getElementById(containerId);
     if (existingContainer) {
